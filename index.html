@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>RSA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+    <h1>R S A</h1>
+    <form>
+        <textarea  id="input" type="text" placeholder="Введите текст для шифра..."></textarea>
+        <button id="btnEnc">Шифровать</button>
+    </form>
+    <p id="keys"></p>
+    <textarea id="parEncrypt" cols="3" rows="3" placeholder="Здесь будет зашифрованное с помощью RSA сообщение..."></textarea>
+    <hr>
+    <form>
+        <textarea  id="inputDec" type="text" placeholder="Введите зашифрованный текст для расшифровки..."></textarea>
+        <input  id="keyP" type="text" placeholder="Введите p..."><br>
+        <input  id="keyQ" type="text" placeholder="Введите q..."><br>
+        <input  id="keyD" type="text" placeholder="Введите d..."><br>
+        <button id="btnDec">Расшифровать</button>
+    </form>
+    <div class="container output">
+        <textarea  class="parDecrypt" cols="3" rows="3" placeholder="Здесь будет расшифрованное сообщение..."></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

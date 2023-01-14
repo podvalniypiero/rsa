@@ -1,0 +1,100 @@
+form {
+    display: flex;
+    justify-content: center;   
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    background: rgb(64, 60, 60);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  
+  #container{
+    margin-top: 300px;
+  }
+  h1{
+    margin-top: 200px;
+    margin-bottom: 80px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 0px;
+    outline: 0;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+    color: whitesmoke;
+  }
+  
+  output {
+    padding: 10px;
+    font-size: 22px;
+    border: 0px;
+    outline: 0;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    text-align: center;
+  }
+  
+#input, #k, #inputDec, .parDecrypt, #keyP, #keyQ, #keyD {
+    width: 40%;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#k {
+    width: 10%;
+}
+
+#keyD, #keyP, #keyQ {
+    width: 8%;
+}
+
+button, p, #parEncrypt, .parDecrypt {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+}
+
+p, #parEncrypt, .parDecrypt {
+    width: 60%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading {
+    font-size: 20px;
+    padding: 10px;
+    font-size: 25px;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+#parEncrypt{
+    margin-bottom: 100px;
+}
+hr{
+    margin-bottom: 100px;
+}
+button:hover{
+    background-color:  rgba(255,255,255,0.6);
+    cursor: pointer;
+}
