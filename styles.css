@@ -48,7 +48,7 @@ body {
     text-align: center;
   }
   
-#input, #k, #inputDec, .parDecrypt, #keyP, #keyQ, #keyD {
+#input, #k, #inputDec, #parDecrypt, #keyP, #keyQ, #keyD {
     width: 40%;
     margin: 10px;
     padding: 5px;
@@ -63,7 +63,7 @@ body {
     width: 8%;
 }
 
-button, p, #parEncrypt, .parDecrypt {
+button, p, #parEncrypt, #parDecrypt {
     margin: 10px;
     padding: 10px;
     font-size: 25px;
@@ -71,7 +71,7 @@ button, p, #parEncrypt, .parDecrypt {
     border: none;
 }
 
-p, #parEncrypt, .parDecrypt {
+p, #parEncrypt, #parDecrypt {
     width: 60%;
     display: block;
     margin-right: auto;
@@ -93,6 +93,9 @@ p, #parEncrypt, .parDecrypt {
 }
 hr{
     margin-bottom: 100px;
+}
+#parDecrypt{
+    margin-top: 60px;
 }
 button:hover{
     background-color:  rgba(255,255,255,0.6);

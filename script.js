@@ -1,3 +1,4 @@
+
 const inputText = document.querySelector('#input')
 const inputDec = document.querySelector('#inputDec')
 const btnEnc = document.querySelector('#btnEnc')
@@ -95,7 +96,7 @@ function encrypt(text) {
     let masNumbers = masText.map(elem => {
         return powerMod(elem.charCodeAt(0), e, n)
     })
-    masNumbers =  masNumbers.map(elem => {
+    masNumbers = masNumbers.map(elem => {
         elem = elem.toString(36)
         elem = elem.split('')
         while (elem.length < 6) elem.unshift('0')
@@ -119,23 +120,92 @@ function decrypt(text, p, q, d) {
     masNumbers.forEach((elem) => {
         textOutput += String.fromCharCode(elem)
     })
-    document.querySelector('.parDecrypt').innerHTML = textOutput
+    document.querySelector('#parDecrypt').innerHTML = textOutput
 }
 
 
 btnEnc.addEventListener('click', (event) => {
     event.preventDefault()
-    let text = inputText.value
-    encrypt(text)
+    let text = inputText.value;
+    console.log(inputText.value);
+    if ((inputText.value)===''){
+         
+Swal.fire({
+    title: 'Кажется, Вы не ввели текст...',
+    text: "Введите сообщение, которое необходимо зашифровать!",
+    icon: 'warning',
+    showConfirmButton: false,
+    showCancelButton: true,
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'Закрыть'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+    }
+    else
+    encrypt(text) // шифруем если есть что 
 })
 
 
 btnDec.addEventListener('click', (event) => {
     event.preventDefault()
     let text = inputDec.value
+
+    console.log(inputDec.value);
+    if ((inputDec.value)===''){
+         
+Swal.fire({
+    title: 'Кажется, Вы не ввели шифрованный текст...',
+    text: "Введите сообщение, которое необходимо дешифровать!",
+    icon: 'warning',
+    showConfirmButton: false,
+    showCancelButton: true,
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'Закрыть'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+    }
+    else
+    {
     let p = Number(document.querySelector('#keyP').value)
     let q = Number(document.querySelector('#keyQ').value)
     let d = Number(document.querySelector('#keyD').value)
-    decrypt(text,p, q, d)
+    console.log(p,q,d);
+
+    if ((p===0)&&(q ===0)&&(d===0)){
+        Swal.fire({
+            title: 'Кажется, Вы не ввели необходимые данные...',
+            text: "Необходимо ввести p, q, d!",
+            icon: 'warning',
+            showConfirmButton: false,
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Закрыть'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
+    }
+    else
+    decrypt(text,p, q, d) // дешифруем, если введены данные
+    }
 })
 
